@@ -4,7 +4,7 @@ resource "google_compute_firewall" "gke_control_plane_node_access" {
   count       = (length(var.gke_control_plane_allowed_ports) > 0 && !var.autopilot) ? 1 : 0
   project     = var.gcp_project_id
   name        = "${var.env_name}-gke-control-plane-node-access"
-  description = "Allow GKE control plane nodes to reach worker nodes on configurable ports (NGINX ingress controller, Datadog cluster agent, Linkerd Control Plane, etc.)"
+  description = "Allow GKE control plane nodes to reach worker nodes on configurable ports"
   network     = google_compute_network.default.self_link
 
   source_ranges = [
