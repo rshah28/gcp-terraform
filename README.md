@@ -186,7 +186,7 @@ This repository contains Terraform configurations for different GKE deployment p
 
 ### GKE Standard Environment
 
-A production-ready GKE Standard cluster featuring:
+A GKE Standard cluster featuring:
 - **Multi-node pool architecture** with spot instances for cost optimization
 - **Private networking** with VPC-native cluster
 - **Modular firewall rules** for security
